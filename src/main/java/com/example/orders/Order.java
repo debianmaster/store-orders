@@ -10,22 +10,13 @@ public class Order {
     @Id
     public String id;
 
-    public String orderBy;
+    public String orderUserEmail;
     public Product[] products;
     public Date orderDate;
+    public String orderState;
 
     public Order() {}
-
-    public Order(String firstName, String lastName) {
-        this.orderBy = firstName;
-        this.orderDate = new Date();
+    public String toString(){
+        return orderUserEmail;
     }
-
-    @Override
-    public String toString() {
-        return String.format(
-                "Customer[id=%s, firstName='%s', lastName='%s']",
-                id, orderBy, orderDate);
-    }
-
 }
