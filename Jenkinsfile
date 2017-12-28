@@ -4,7 +4,7 @@ node('maven'){
 		sh "mvn clean package"
 	}
 	stage ('Test') {
-		sh "mvn fabric8:build"
+		sh "mvn fabric8:deploy"
 	}
 	stage ('Promote') {
 		sh "oc tag myproject/orders:latest myproject/orders:promoteToQA"
