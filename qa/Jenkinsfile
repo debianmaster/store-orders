@@ -4,6 +4,6 @@ node('maven'){
 		sh "oc get po"
 	}
 	stage ('promoteToPROD') {
-		sh "mvn fabric8:deploy"
+		sh "oc get po "
 	}
 }
