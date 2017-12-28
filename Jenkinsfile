@@ -1,4 +1,3 @@
-
 node('maven'){
 	stage ('Build') {
 		checkout scm
