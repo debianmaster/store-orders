@@ -1,8 +1,9 @@
 node {
 	stage ('deploymentToQA') {
-		sh "oc get po"
+		sh "oc tag myproject/orders:promoteToQA qa/orders:promoteToQA"
+		sh "oc new-app qa/orders:promoteToQA --name=orders --dry-run -o yaml | oc apply -f-" 
 	}
 	stage ('promoteToPROD') {
-		sh "oc get po -w"
+		sh "oc tag qa/orders:promoteToQA qa/orders:promoteToPROD"
 	}
 }
