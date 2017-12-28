@@ -27,6 +27,6 @@ public class OrdersApplication {
 		System.out.println(order.toString());
 		order.orderState="NEW";
 		repository.save(order);
-        return "OK";
+        return "200 OK";
     } 	
 }
