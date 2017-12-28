@@ -11,6 +11,6 @@ oc new-build https://github.com/debianmaster/store-orders --context-dir=prod --n
 
 ## Permissions
 ```sh
-oc adm policy add-role-to-user edit system:serviceaccounts:qa -n myproject
-oc adm policy add-role-to-user edit system:serviceaccounts:prod -n qa
+oc  policy add-role-to-user edit system:serviceaccount:qa:jenkins -n myproject
+oc  policy add-role-to-user edit system:serviceaccount:prod:jenkins -n qa
 ```
