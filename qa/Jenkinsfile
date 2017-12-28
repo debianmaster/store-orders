@@ -4,6 +4,6 @@ node('maven'){
 		sh "oc get po"
 	}
 	stage ('promoteToPROD') {
-		sh "oc get po "
+		sh "oc get po -w"
 	}
 }
