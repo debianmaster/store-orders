@@ -8,6 +8,6 @@ node('maven'){
 		//sh "mvn fabric8:deploy"
 	}
 	stage ('Promote') {
-		sh "oc tag myproject/store-orders:latest myproject/store-orders:promoteToQA"
+		sh "oc tag myproject/orders:latest myproject/orders:promoteToQA"
 	}	
 }
