@@ -1,5 +1,4 @@
-
-node('maven'){
+node {
 	stage ('deploymentToQA') {
 		sh "oc get po"
 	}
